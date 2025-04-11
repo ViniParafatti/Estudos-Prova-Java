@@ -1,0 +1,85 @@
+Arrays
+
+Criando Arrays em JavaScript
+A forma mais comum de criar arrays é usando
+colchetes:
+
+const frutas = ['maçã', 'banana', 'laranja'];
+
+Esta notação é simples e direta, ideal para arrays com
+elementos conhecidos previamente.
+
+Arrays com Tipos Mistos
+JavaScript permite misturar diferentes tipos de dados
+em um único array:
+
+const misto = [42, 'texto', true, {chave: 'valor'}, [1, 2,
+3]];
+
+Esta flexibilidade é uma característica poderosa da
+linguagem.
+
+
+Acessando Elementos de um Array
+Índices Baseados em Zero
+
+Em JavaScript, o primeiro elemento do array está na posição 0:
+const primeiroItem = frutas[0]; // 'maçã'
+
+Acessando o Último Elemento
+Tradicionalmente, usamos length-1:
+const ultimoItem = frutas[frutas.length - 1];
+
+Propriedade Length
+A propriedade length retorna o número de elementos:
+const tamanho = frutas.length; // 3
+
+push() e pop()
+Manipulam o final do array:
+frutas.push('uva'); // Adiciona ao final
+const ultima = frutas.pop(); //Remove do final
+
+unshift() e shift()
+Manipulam o início do array:
+frutas.unshift('morango'); //Adiciona no início
+const primeira = frutas.shift(); //Remove do início
+
+Iterando sobre Arrays
+
+Loop For Tradicional
+for (let i = 0; i < frutas.length; i++) {
+console.log(frutas[i]);
+}
+
+Método forEach()
+
+frutas.forEach(fruta => {
+console.log(fruta);
+});
+
+Método map()
+const frutasMaiusculas = frutas.map(fruta => {
+return fruta.toUpperCase();
+});
+
+Método filter()
+const frutasComA = frutas.filter(fruta => {
+
+return fruta.includes('a');
+});
+
+slice()
+Extrai uma parte do array sem modificar o original:
+const parte = frutas.slice(1, 3);
+
+concat()
+Combina dois ou mais arrays sem modificar os originais:
+const combinado = frutas.concat(vegetais);
+
+splice()
+Modifica o array original adicionando ou removendo elementos:
+frutas.splice(1, 1, 'pêra', 'abacaxi');
+
+join()
+Converte o array em uma string:
+const lista = frutas.join(', ');
