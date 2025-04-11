@@ -1,0 +1,26 @@
+// Exercício 1: Criar um objeto carro
+const carro = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    ano: 2023
+};
+console.log(carro.marca);
+console.log(carro.modelo);
+console.log(carro.ano);
+
+// Exercício 2: Remover a propriedade email de um objeto
+const usuario = {
+    nome: "Fernanda",
+    email: "fernanda@email.com",
+    idade: 25
+};
+delete usuario.email;
+console.log(usuario);
+
+// Exercício 3: Alterar a propriedade de um objeto
+const pessoa = {
+    nome: "Carlos",
+    idade: 29
+};
+pessoa.idade = 31;
+console.log(pessoa.idade);
