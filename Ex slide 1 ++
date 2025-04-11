@@ -1,0 +1,120 @@
+// 1. Completar a função para somar dois números
+function somar(a, b) {
+    return a + b;
+}
+console.log(somar(5, 3)); // 8
+
+// 2. Criar uma função que retorne 'Par' ou 'Ímpar'
+function parOuImpar(numero) {
+    return numero % 2 === 0 ? 'Par' : 'Ímpar';
+}
+console.log(parOuImpar(4)); // 'Par'
+
+// 3. Escreva um programa que converta metros em centímetros e milímetros.
+function converterMetros(metros) {
+    const centimetros = metros * 100;
+    const milimetros = metros * 1000;
+    return {
+        centimetros: centimetros,
+        milimetros: milimetros
+    };
+}
+const medidas = converterMetros(2);
+console.log(`2 metros equivalem a ${medidas.centimetros} centímetros e ${medidas.milimetros} milímetros.`);
+
+// 4. Dado o array const frutas = ['maçã', 'banana'];, adicione as frutas 'laranja' e 'uva'
+// ao final do array, usando método.
+const frutas = ['maçã', 'banana'];
+frutas.push('laranja', 'uva');
+console.log(frutas); // ['maçã', 'banana', 'laranja', 'uva']
+
+// 5. Considere o array const numeros = [1, 2, 3, 4, 5];. Remova o último elemento do
+// array e armazene-o em uma variável chamada ultimoNumero, usando método.
+const numeros5 = [1, 2, 3, 4, 5];
+const ultimoNumero = numeros5.pop();
+console.log(ultimoNumero); // 5
+console.log(numeros5); // [1, 2, 3, 4]
+
+// 6. Dado o array const cores = ['vermelho', 'azul', 'verde'];, remova o primeiro
+// elemento e armazene-o em uma variável chamada primeiraCor, usando método .
+const cores = ['vermelho', 'azul', 'verde'];
+const primeiraCor = cores.shift();
+console.log(primeiraCor); // 'vermelho'
+console.log(cores); // ['azul', 'verde']
+
+// 7. Com o array const animais = ['cachorro', 'gato'];, adicione os animais 'elefante' e
+// 'leão' no início do array, usando método.
+const animais = ['cachorro', 'gato'];
+animais.unshift('elefante', 'leão');
+console.log(animais); // ['elefante', 'leão', 'cachorro', 'gato']
+
+// 8. Dado o array const numeros = [10, 20, 30, 40, 50];, remova os dois primeiros
+// elementos e, em seguida, adicione os números 5 e 15 nas primeiras posições,
+// usando método.
+const numeros8 = [10, 20, 30, 40, 50];
+numeros8.splice(0, 2); // Remove os dois primeiros elementos
+numeros8.unshift(5, 15); // Adiciona 5 e 15 no início
+console.log(numeros8); // [5, 15, 30, 40, 50]
+
+// 9. Considere o array const letras = ['a', 'b', 'c', 'd', 'e'];. Crie um novo array contendo
+// apenas os elementos 'b', 'c' e 'd', usando método
+const letras = ['a', 'b', 'c', 'd', 'e'];
+const subLetras = letras.slice(1, 4);
+console.log(subLetras); // ['b', 'c', 'd']
+
+// 10. Dado os arrays const array1 = [1, 2, 3]; e const array2 = [4, 5, 6]; crie um novo
+// array que combine os elementos de ambos, usando o método concat
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const arrayCombinado = array1.concat(array2);
+console.log(arrayCombinado); // [1, 2, 3, 4, 5, 6]
+
+// 11. Criar uma função que recebe um nome e retorna uma saudação personalizada
+function saudacao(nome) {
+    // Complete para retornar "Olá, <nome>!"
+    return `Olá, ${nome}!`;
+}
+console.log(saudacao("Carlos")); // "Olá, Carlos!"
+console.log(saudacao("Ana")); // "Olá, Ana!"
+
+// 12. Qual a diferença entre var, let e const?
+/*
+- var:
+    - Declarada globalmente ou no escopo da função, independentemente do bloco.
+    - Pode ser redeclarada e ter seu valor reatribuído.
+    - Sofre hoisting (a declaração é movida para o topo do escopo, mas a inicialização não).
+
+- let:
+    - Declarada no escopo do bloco (definido por chaves {}).
+    - Não pode ser redeclarada dentro do mesmo escopo, mas seu valor pode ser reatribuído.
+    - Sofre hoisting, mas não é inicializada até que a declaração seja encontrada no código (resultando em um erro se acessada antes da declaração).
+
+- const:
+    - Declarada no escopo do bloco.
+    - Não pode ser redeclarada nem ter seu valor reatribuído após a inicialização.
+    - Também sofre hoisting, mas não é inicializada até que a declaração seja encontrada. É obrigatório inicializar uma variável const na declaração.
+
+Em resumo, let e const oferecem um escopo mais previsível e ajudam a evitar erros comuns associados ao var. const é usada para valores que não devem ser alterados.
+*/
+
+// 13. O que acontece quando você tenta acessar uma variável que ainda não foi definida?
+/*
+Quando você tenta acessar uma variável que ainda não foi definida em JavaScript, ocorre um erro do tipo ReferenceError. O interpretador do JavaScript não consegue encontrar uma declaração para essa variável no escopo atual ou em seus escopos pai.
+*/
+// Exemplo:
+// console.log(variavelNaoDefinida); // Isso causará um ReferenceError: variavelNaoDefinida is not defined
+
+// 14. Como funciona o typeof? Escreva um código usando o typeof
+/*
+O operador typeof em JavaScript é usado para determinar o tipo de dado de um operando. Ele retorna uma string indicando o tipo do valor.
+*/
+console.log(typeof 10); // "number"
+console.log(typeof "Olá"); // "string"
+console.log(typeof true); // "boolean"
+console.log(typeof undefined); // "undefined"
+console.log(typeof null); // "object" (um bug histórico do JavaScript)
+console.log(typeof {}); // "object"
+console.log(typeof []); // "object"
+console.log(typeof function() {}); // "function"
+let x;
+console.log(typeof x); // "undefined"
