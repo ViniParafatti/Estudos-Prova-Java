@@ -50,23 +50,31 @@ Loop For Tradicional
 for (let i = 0; i < frutas.length; i++) {
 console.log(frutas[i]);
 }
+Abordagem clássica, oferece controle total sobre a iteração e funciona em
+todos os navegadores, mesmo os mais antigos.
 
 Método forEach()
 
 frutas.forEach(fruta => {
 console.log(fruta);
 });
+Mais moderno e legível, executa uma função para cada elemento do array,
+sem retornar um novo array.
 
 Método map()
 const frutasMaiusculas = frutas.map(fruta => {
 return fruta.toUpperCase();
 });
+Similar ao forEach(), mas cria um novo array com os resultados da função
+aplicada a cada elemento.
 
 Método filter()
 const frutasComA = frutas.filter(fruta => {
-
 return fruta.includes('a');
 });
+Cria um novo array apenas com os elementos que passam no teste da
+função fornecida.
+
 
 slice()
 Extrai uma parte do array sem modificar o original:
